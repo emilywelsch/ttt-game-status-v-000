@@ -1,4 +1,3 @@
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " ",]
 # Helper Method
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
@@ -16,12 +15,6 @@ WIN_COMBINATIONS = [
   [2,4,6]  # Right diagonal
 ]
 
-# def won?(board)
-#   WIN_COMBINATIONS.find do |win_combination|
-#      board[win_combination[0]] == board[win_combination[1]] && board[win_combination[0]] == board[win_combination2]] && position_taken?(board,win_combination[1])
-#    end
-#  end
-
 # Define won? method
 def won?(board)
     # for each win_combination in WIN_COMBINATIONS, win_combination is a 3 element array of indexes that compose a win, [0,1,2]
@@ -37,6 +30,8 @@ def won?(board)
       return win_combination # return the X win_combination indexes that won.
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
         return win_combination # return the O win_combination indexes that won.
+      elsif position_taken?(board,index) ==
+
     else
       false
     end
