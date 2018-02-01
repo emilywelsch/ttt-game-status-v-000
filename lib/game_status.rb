@@ -36,10 +36,23 @@ def won?(board)
   end
 end
 
+# def full?(board)
+#   board.detect do |i|
+#    if i == " " || i == nil
+#      return false
+#    else
+#      return true
+#    end
+#   end
+#  end
+
+
 def full?(board)
-  if board.includes?("") || board.includes?(" ")
+  if board.include?("") # => then not full
     return false
-  else
+  elsif board.include?(" ") # => then not full
+    return false
+  else # => then full
     true
   end
 end
