@@ -18,7 +18,7 @@ WIN_COMBINATIONS = [
 # Define won? method
 def won?(board)
     # for each win_combination in WIN_COMBINATIONS, win_combination is a 3 element array of indexes that compose a win, [0,1,2]
-   WIN_COMBINATIONS.each do |win_combination|
+   WIN_COMBINATIONS.detect do |win_combination|
 #   # grab each index from the win_combination that composes a win.
   win_index_1 = win_combination[0]
   win_index_2 = win_combination[1]
