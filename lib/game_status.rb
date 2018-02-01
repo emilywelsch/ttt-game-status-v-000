@@ -1,3 +1,4 @@
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " ",]
 # Helper Method
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
@@ -38,6 +39,7 @@ def won?(board)
       return win_combination # return the X win_combination indexes that won.
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
         return win_combination # return the O win_combination indexes that won.
+    elsif position_taken?.include...
     else
       false
     end
