@@ -4,8 +4,8 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
-# Define your WIN_COMBINATIONS constant
-WIN_COMBINATIONS = [ # write an array for each win combination
+# Define your WIN_COMBINATIONS constant: # write an array for each win combination
+WIN_COMBINATIONS = [
   [0,1,2], # Top row
   [3,4,5],  # Middle row
   [6,7,8], # Bottom row
@@ -22,12 +22,10 @@ WIN_COMBINATIONS = [ # write an array for each win combination
 #    end
 #  end
 
-
-
-
-    # for each win_combination in WIN_COMBINATIONS
+# Define won? method
+def won?(board)
+    # for each win_combination in WIN_COMBINATIONS, win_combination is a 3 element array of indexes that compose a win, [0,1,2]
    WIN_COMBINATIONS.each do |win_combination|
-# win_combination is a 3 element array of indexes that compose a win, [0,1,2]
 #   # grab each index from the win_combination that composes a win.
   win_index_1 = win_combination[0]
   win_index_2 = win_combination[1]
@@ -39,7 +37,8 @@ WIN_COMBINATIONS = [ # write an array for each win combination
       return win_combination # return the X win_combination indexes that won.
     elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
         return win_combination # return the O win_combination indexes that won.
-    elsif position_taken?.include...
+    elsif position_taken?(board, index) == true
+      false      
     else
       false
     end
