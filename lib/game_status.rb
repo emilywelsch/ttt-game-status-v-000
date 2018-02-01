@@ -16,6 +16,14 @@ WIN_COMBINATIONS = [ # write an array for each win combination
 ]
 
 def won?(board)
+  WIN_COMBINATIONS.find do |win_combination|
+     board[win_combination[0]] == board[win_combination[1]] && board[win_combination[0]] == board[win_combination2]] && position_taken?(board,win_combination[1])
+   end
+ end
+
+
+
+
     # for each win_combination in WIN_COMBINATIONS
   WIN_COMBINATIONS.each do |win_combination|
 #   # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
