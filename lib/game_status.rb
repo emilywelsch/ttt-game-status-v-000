@@ -16,11 +16,11 @@ WIN_COMBINATIONS = [ # write an array for each win combination
   [2,4,6]  # Right diagonal
 ]
 
-def won?(board)
-  WIN_COMBINATIONS.find do |win_combination|
-     board[win_combination[0]] == board[win_combination[1]] && board[win_combination[0]] == board[win_combination2]] && position_taken?(board,win_combination[1])
-   end
- end
+# def won?(board)
+#   WIN_COMBINATIONS.find do |win_combination|
+#      board[win_combination[0]] == board[win_combination[1]] && board[win_combination[0]] == board[win_combination2]] && position_taken?(board,win_combination[1])
+#    end
+#  end
 
 
 
